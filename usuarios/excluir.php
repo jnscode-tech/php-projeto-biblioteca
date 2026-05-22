@@ -8,7 +8,8 @@ try {
     $stmt->execute([':id' => $id]);
 
     header("Location: listar.php");
-    exit;
+    echo "Usuário excluído com sucesso!";
+    exit();
 } catch (PDOException $e) {
     die("Erro ao excluir: " . $e->getMessage());
 }
